@@ -7,6 +7,7 @@ async def sent(vk, user_id, get_randid, mes, text):
     #запуск события печати
     #vk.messages.setActivity(type='typing', peer_id = int(user_id))
     keyboard = keyboards(text)
+    if (not mes): mes = 'default' 
     try:
         if (keyboard != False):
             vk.messages.send(
